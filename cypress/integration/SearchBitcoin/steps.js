@@ -1,3 +1,5 @@
+var interes
+
 Given(/^que eu acesso o site$/, () => {
 	cy.visit('/');
 });
@@ -7,11 +9,11 @@ Given(/^que eu esceva o site$/, () => {
 });
 
 When(/^concacteno com "([^"]*)"$/, (concate) => {
-	cy.visit('/'+concate)
+	cy.visit('/' + concate)
 });
 
 When(/^escrevo "([^"]*)"$/, (interesse) => {
-	console.log(interesse);
+	interes = interesse
 });
 
 When(/^aperto "([^"]*)"$/, (pesquisar) => {
@@ -26,8 +28,8 @@ When(/^aperto "([^"]*)"$/, (pesquisar) => {
 });
 
 Then(/^devo ver mais de "([^"]*)" resultados$/, (result) => {
-	cy.get('div.nrn-react-div').should(($p) => {
-		expect($p).to.be.lengthOf(result);		
+	cy.get('div.nrn-react-div').should(($article) => {
+		expect($article).to.be.length(result)
 	});
-});
 
+})
