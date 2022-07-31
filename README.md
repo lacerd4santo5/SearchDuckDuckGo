@@ -9,4 +9,4 @@ Utilize as formas de buscar:
 - Digitando e utilizando o clique na lupa para buscar;
 - Utilizando o formulário diretamente.
 
--Teste se temos mais que 10 resultados.
+-Teste se tem mais que 10 resultados.
