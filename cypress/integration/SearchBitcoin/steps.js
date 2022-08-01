@@ -1,22 +1,22 @@
 var interes
 
-Given(/^que eu acesso o site$/, () => {
+Given(/^que acesse o site$/, () => {
 	cy.visit('/');
 });
 
-Given(/^que eu esceva o site$/, () => {
+Given(/^que esceva o site$/, () => {
 	return true;
 });
 
-When(/^concacteno com "([^"]*)"$/, (concate) => {
+When(/^concactene com "([^"]*)"$/, (concate) => {
 	cy.visit('/' + concate)
 });
 
-When(/^escrevo "([^"]*)"$/, (interesse) => {
+When(/^escreva "([^"]*)"$/, (interesse) => {
 	interes = interesse
 });
 
-When(/^aperto "([^"]*)"$/, (pesquisar) => {
+When(/^aperte "([^"]*)"$/, (pesquisar) => {
 	if (pesquisar === 'ENTER') {
 		cy.get('#search_form_input_homepage').type(`${interes}{enter}`);
 	}
@@ -27,7 +27,7 @@ When(/^aperto "([^"]*)"$/, (pesquisar) => {
 	;
 });
 
-Then(/^devo ver mais de "([^"]*)" resultados$/, (result) => {
+Then(/^deve ver mais de "([^"]*)" resultados$/, (result) => {
 	cy.get('div.nrn-react-div').should(($article) => {
 		expect($article).to.be.length(result)
 	});

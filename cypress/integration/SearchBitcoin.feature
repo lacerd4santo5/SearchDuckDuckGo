@@ -4,18 +4,18 @@ Feature: SearchBitcoin
     Para que possa me informar
   
 Scenario: Pesquisando e utilizando ENTER
-    Given que eu acesso o site
-    When escrevo "Bitcoin"
-    And aperto "ENTER"
-    Then devo ver mais de "10" resultados
+    Given que acesse o site
+    When escreva "Bitcoin"
+    And aperte "ENTER"
+    Then deve ver mais de "10" resultados
 
 Scenario: Pesquisando e utilizando clicando na lupa
-    Given que eu acesso o site
-    When escrevo "Bitcoin"
-    And aperto "na lupa"
-    Then devo ver mais de "10" resultados
+    Given que acesse o site
+    When escreva "Bitcoin"
+    And aperte "na lupa"
+    Then deve ver mais de "10" resultados
 
 Scenario: Pesquisando pelo formulário
-    Given que eu esceva o site
-    And concacteno com "Bitcoin"
-    Then devo ver mais de "10" resultados
+    Given que esceva o site
+    And concactene com "Bitcoin"
+    Then deve ver mais de "10" resultados
